@@ -7,4 +7,4 @@ export const getFilms = async value =>  {
       return data.Search;
     })
 };
- 
+   
