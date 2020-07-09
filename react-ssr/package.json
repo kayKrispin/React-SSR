@@ -23,11 +23,11 @@
   },
   "scripts": {
     "start": "node server/start.js",
-    "build": "node server/start.js && npm run build ",
+    "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "ssr": "node ./server/start.js", 
-    "ssr-up": "npm run build && node server/start.js"
+    "ssr": "node ./server/start.js",
+    "ssr-up": "node server/start.js npm run build"
   },
   "eslintConfig": {
     "extends": "react-app"
