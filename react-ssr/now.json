@@ -1,0 +1,8 @@
+{
+  "name": "caravaggio",
+  "version": 2,
+  "public": true,
+  "builds": [
+    {"src": "server/start.js", "use": "@now/node-server"}
+  ]
+}
