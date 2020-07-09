@@ -6,7 +6,7 @@ import renderer from "./middleware/renderer";
 const app = express();
 const router = express.Router();
 
-const PORT = "8080";
+const PORT = process.env.PORT || 8080;
 
 router.use(express.static(
   path.resolve(__dirname, "..", "build"),
