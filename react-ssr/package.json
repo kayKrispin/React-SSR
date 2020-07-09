@@ -23,7 +23,7 @@
   },
   "scripts": {
     "start": "node server/start.js",
-    "build": "react-scripts build",
+    "build": "node server/start.js",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "ssr": "node ./server/start.js",
