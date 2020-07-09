@@ -22,12 +22,12 @@
     "redux-saga": "^1.1.3"
   },
   "scripts": {
-    "start": "node ./server/start.js",
+    "start": "node server/start.js",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "ssr": "node ./server/start.js",
-    "ssr-up": "npm run build && NODE_ENV=production node server/start.js"
+    "ssr-up": "npm run build && node server/start.js"
   },
   "eslintConfig": {
     "extends": "react-app"
