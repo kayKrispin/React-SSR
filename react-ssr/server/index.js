@@ -1,22 +1,32 @@
-import express from "express";
-import path from "path";
-import React from "react";
-import renderer from "./middleware/renderer";
-
+const express = require("express");
 const app = express();
-const router = express.Router();
 
-const PORT = "8080";
+const port = 5000;
 
-router.use(express.static(
-  path.resolve(__dirname, "..", "build"),
-  { maxAge: "30d", index: false },
-));
+// Body parser
+app.use(express.urlencoded({ extended: false }));
 
-router.use('*', renderer);
+// Home route
+app.get("/", (req, res) => {
+  res.send("Welcome to a basic express App");
+});
 
-app.use(router);
+// Mock API
+app.get("/users", (req, res) => {
+  res.json([
+    { name: "William", location: "Abu Dhabi" },
+    { name: "Chris", location: "Vegas" }
+  ]);
+});
 
-app.listen(PORT, () => console.log(`Running on port, ${PORT}`));
+app.post("/user", (req, res) => {
+  const { name, location } = req.body;
 
+  res.send({ status: "User created", name, location });
+});
 
+// Listen on port 5000
+app.listen(port, () => {
+  console.log(`Server is booming on port 5000
+Visit http://localhost:5000`);
+});
