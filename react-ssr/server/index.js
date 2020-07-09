@@ -8,12 +8,11 @@ const router = express.Router();
 
 const PORT = "8080";
 
-router.use(express.static(
-  path.resolve(__dirname, "..", "build"),
-  { maxAge: "30d", index: false },
-));
+// Home route
+app.get("/", (req, res) => {
+  res.send("Welcome to a baserfrefeferreefeic express App");
+});
 
-router.use('*', renderer);
 
 app.use(router);
 
